@@ -7,7 +7,6 @@ import { ChevronsUp } from "react-feather";
 import { RotateCcw } from "react-feather";
 import { Hash } from "react-feather";
 
-
 function App() {
   const [count, setCount] = useState(0);
 
@@ -32,7 +31,7 @@ function App() {
   const randomNo = (event) => {
     event.preventDefault();
     setCount(Math.floor(Math.random() * 100) + 1);
-  }
+  };
   // decrease count by 10
   const decByTen = (event) => {
     event.preventDefault();
@@ -45,39 +44,41 @@ function App() {
   };
 
   return (
-    <section className="body">
-    
-      <section className="counterbox">
-        <p>Current value:</p>
-        <div className="count">{count} </div>
-        <div className="counterbutton">
-        <button onClick={incByOne}>
-          {" "}
-          <ChevronUp />{" "}
-        </button>
-        <button onClick={incByTen}>
-          {" "}
-          <ChevronsUp />{" "}
-        </button>
-        <button onClick={toZero}>
-          {" "}
-          <RotateCcw />{" "}
-        </button>
-        <button onClick={randomNo}>
-          {" "}
-          <Hash />{" "}
-        </button>
-        <button onClick={decByTen}>
-          {" "}
-          <ChevronsDown />{" "}
-        </button>
-        <button onClick={decByOne}>
-          {" "}
-          <ChevronDown />{" "}
-        </button>
-        </div>
+    <>
+ <title>Vite + React {count} </title>
+      <section className="body">
+        <section className="counterbox">
+          <p>Current value:</p>
+          <div className="count">{count} </div>
+          <div className="counterbutton">
+            <button onClick={incByOne}>
+              {" "}
+              <ChevronUp />{" "}
+            </button>
+            <button onClick={incByTen}>
+              {" "}
+              <ChevronsUp />{" "}
+            </button>
+            <button onClick={toZero}>
+              {" "}
+              <RotateCcw />{" "}
+            </button>
+            <button onClick={randomNo}>
+              {" "}
+              <Hash />{" "}
+            </button>
+            <button onClick={decByTen}>
+              {" "}
+              <ChevronsDown />{" "}
+            </button>
+            <button onClick={decByOne}>
+              {" "}
+              <ChevronDown />{" "}
+            </button>
+          </div>
+        </section>
       </section>
-    </section>
+    </>
   );
 }
 
